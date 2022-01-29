@@ -14,6 +14,14 @@ public class Character2DController : MonoBehaviour
     public float JumpForce = 1;
     public float dirX;
     private Rigidbody2D _rigidbody;
+
+//data for the attack
+    public float range = 3;
+    public int damage = 3;
+    public float colliderDistance = 0.25f;
+    public BoxCollider2D boxCollider;
+    public LayerMask enemyLayer;
+    public Health_script enemyHealth;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -50,10 +58,13 @@ public class Character2DController : MonoBehaviour
             _rigidbody.AddForce(new Vector2(0, JumpForce));
         }
 
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("hit") && Input.GetButtonDown("Fire1") && cooldownTimer > attackCooldown)
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("hit") && Input.GetButtonDown("Fire1"))
         {
-            anim.SetBool("isWalking", false);
-            Attack();
+            if (cooldownTimer >= attackCooldown)
+            {
+                anim.SetBool("isWalking", false);
+                Attack();
+            }
         }
         cooldownTimer += Time.deltaTime;
     }
@@ -63,6 +74,34 @@ public class Character2DController : MonoBehaviour
         anim.SetTrigger("attack");
         cooldownTimer = 0;
     }
+
+    //start attack code
+    private bool EnemyInSight()
+    {
+        RaycastHit2D hit = 
+            Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
+            0, Vector2.left, 0, enemyLayer);
+
+        if (hit.collider != null)
+            enemyHealth = hit.transform.GetComponent<Health_script>();
+
+        return hit.collider != null;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
+    }
+
+    private void DamageEnemy()
+    {
+        if (EnemyInSight())
+            enemyHealth.TakeDamage(damage);
+    }
+//end attack code
 
     private void OnCollisionEnter2D(Collision2D other)
     {
