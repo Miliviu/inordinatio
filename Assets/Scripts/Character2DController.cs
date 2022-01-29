@@ -8,6 +8,8 @@ public class Character2DController : MonoBehaviour
     public GameObject hud;
     private AudioSource source;
     private Animator anim;
+    private float cooldownTimer = Mathf.Infinity;
+    public float attackCooldown = 1;
     public float MovementSpeed = 10;
     public float JumpForce = 1;
     public float dirX;
@@ -15,7 +17,6 @@ public class Character2DController : MonoBehaviour
 
     private void Start()
     {
-        source = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
 
@@ -44,11 +45,18 @@ public class Character2DController : MonoBehaviour
             _rigidbody.AddForce(new Vector2(0, JumpForce));
         }
 
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("hit") && Input.GetButtonDown("Fire1"))
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("hit") && Input.GetButtonDown("Fire1") && cooldownTimer > attackCooldown)
         {
             anim.SetBool("isWalking", false);
-            anim.SetTrigger("attack");
+            Attack();
         }
+        cooldownTimer += Time.deltaTime;
+    }
+
+    private void Attack()
+    {
+        anim.SetTrigger("attack");
+        cooldownTimer = 0;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

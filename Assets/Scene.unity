@@ -120,7 +120,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &22744319
+=======
+--- !u!1 &123425131
+>>>>>>> samoreno
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,15 +132,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 22744320}
   - component: {fileID: 22744321}
   m_Layer: 0
   m_Name: wood1
+=======
+  - component: {fileID: 123425133}
+  - component: {fileID: 123425132}
+  m_Layer: 9
+  m_Name: EnemyPatrol
+>>>>>>> samoreno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &22744320
 Transform:
   m_ObjectHideFlags: 0
@@ -210,10 +222,15 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &341042824
 BoxCollider2D:
+=======
+--- !u!114 &123425132
+MonoBehaviour:
+>>>>>>> samoreno
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 341042822}
   m_Enabled: 1
   m_Density: 1
@@ -252,11 +269,27 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &385429415
+=======
+  m_GameObject: {fileID: 123425131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289e2426985924a9397cef3f287bbf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdge: {fileID: 1298858068}
+  rightEdge: {fileID: 263028113}
+  enemy: {fileID: 1806186173}
+  speed: 2
+  idleDuration: 3
+  anim: {fileID: 1806186170}
+--- !u!4 &123425133
+>>>>>>> samoreno
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 385429414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -292,6 +325,20 @@ BoxCollider2D:
   m_Size: {x: 1.8657837, y: 0.31973553}
   m_EdgeRadius: 0
 --- !u!1 &749492451
+=======
+  m_GameObject: {fileID: 123425131}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.83, y: -2.06, z: -1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_Children:
+  - {fileID: 1298858068}
+  - {fileID: 263028113}
+  - {fileID: 1806186173}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &263028112
+>>>>>>> samoreno
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -299,6 +346,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 749492452}
   - component: {fileID: 749492453}
   m_Layer: 0
@@ -309,11 +357,23 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &749492452
+=======
+  - component: {fileID: 263028113}
+  m_Layer: 9
+  m_Name: RighEdge
+  m_TagString: Untagged
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &263028113
+>>>>>>> samoreno
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 749492451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -422,6 +482,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770752675}
   m_CullTransparentMesh: 0
+=======
+  m_GameObject: {fileID: 263028112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.13, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 123425133}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> samoreno
 --- !u!1 &790205044
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +858,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066230433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.06, y: -0.12, z: 0}
+  m_LocalPosition: {x: 2.42, y: -0.12, z: 0}
   m_LocalScale: {x: 2.048, y: 2.162, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -834,6 +904,7 @@ GameObject:
   - component: {fileID: 1082559018}
   - component: {fileID: 1082559019}
   - component: {fileID: 1082559020}
+  - component: {fileID: 1082559021}
   m_Layer: 8
   m_Name: warrior
   m_TagString: Untagged
@@ -938,7 +1009,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f794c94731c424f56a7950473170c1cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   hud: {fileID: 0}
+=======
+  attackCooldown: 1
+>>>>>>> samoreno
   MovementSpeed: 2
   JumpForce: 200
   dirX: 0
@@ -989,6 +1064,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14322998, y: 0.33131444}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!1 &1259035276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,11 +1103,15 @@ RectTransform:
   m_SizeDelta: {x: 806, y: 157.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1259035278
+=======
+--- !u!114 &1082559021
+>>>>>>> samoreno
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1259035276}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1067,6 +1147,18 @@ CanvasRenderer:
   m_GameObject: {fileID: 1259035276}
   m_CullTransparentMesh: 0
 --- !u!1 &1466214184
+=======
+  m_GameObject: {fileID: 1082559014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e26f534ea637349a0bc6f44b578ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 20
+  iFramesDuration: 3
+  numberOfFlashes: 3
+--- !u!1 &1298858067
+>>>>>>> samoreno
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1074,6 +1166,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1466214185}
   - component: {fileID: 1466214186}
   m_Layer: 0
@@ -1084,11 +1177,23 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1466214185
+=======
+  - component: {fileID: 1298858068}
+  m_Layer: 9
+  m_Name: LeftEdge
+  m_TagString: Untagged
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1298858068
+>>>>>>> samoreno
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1466214184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1123,6 +1228,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2371674, y: 0.27532864}
   m_EdgeRadius: 0
+=======
+  m_GameObject: {fileID: 1298858067}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.41, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 123425133}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> samoreno
 --- !u!1 &1796349950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,8 +1377,10 @@ GameObject:
   - component: {fileID: 1806186172}
   - component: {fileID: 1806186171}
   - component: {fileID: 1806186170}
-  m_Layer: 9
-  m_Name: Bringer-of-Death-SpritSheet_0
+  - component: {fileID: 1806186175}
+  - component: {fileID: 1806186174}
+  m_Layer: 8
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1299,9 +1416,9 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.37832206, y: -0.18501899}
+  m_Offset: {x: -0.34631175, y: -0.18501899}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1312,7 +1429,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24570334, y: 0.559962}
+  m_Size: {x: 0.2054461, y: 0.559962}
   m_EdgeRadius: 0
 --- !u!212 &1806186172
 SpriteRenderer:
@@ -1355,7 +1472,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -750047184722822154, guid: 1914d95466e3d4341a618c35a56d5f82,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.4, y: 0.93}
@@ -1371,13 +1488,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806186169}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.229, y: -1.813, z: -1}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.29266667, y: 0.16466665, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 123425133}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1872043883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,11 +1572,15 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &2014426054
+=======
+--- !u!114 &1806186174
+>>>>>>> samoreno
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 2014426053}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1473,11 +1595,24 @@ MonoBehaviour:
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
 --- !u!114 &2014426055
+=======
+  m_GameObject: {fileID: 1806186169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e26f534ea637349a0bc6f44b578ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 10
+  iFramesDuration: 0
+  numberOfFlashes: 0
+--- !u!114 &1806186175
+>>>>>>> samoreno
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 2014426053}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1501,6 +1636,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_GameObject: {fileID: 1806186169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab7efc5bc97f4473b30b226c6062c04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 1
+  range: 2.5
+  damage: 1
+  colliderDistance: 0.25
+  boxCollider: {fileID: 1806186171}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  cooldownTimer: 2
+  anim: {fileID: 1806186170}
+  playerHealth: {fileID: 1082559021}
+  enemyPatrol: {fileID: 123425132}
+>>>>>>> samoreno
 --- !u!1 &2116199035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,6 +1797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sound1: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &2136899723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,3 +1855,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75011396, y: 0.71263087}
   m_EdgeRadius: 0
+=======
+  attackCooldown: 1
+>>>>>>> samoreno
