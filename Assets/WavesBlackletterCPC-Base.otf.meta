@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 22be0af6139d54b71b56d1561f841892
+guid: ddda0c14804ed448788f0047b9b6aa48
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,7 +11,11 @@ TrueTypeFontImporter:
   fontName: Waves Blackletter CPC
   fontNames:
   - Waves Blackletter CPC
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3664951291f4b4d9881d8be5dac26462, type: 3}
+  - {fileID: 12800000, guid: ca9f965e90053495a94145b91e936d6c, type: 3}
+  - {fileID: 12800000, guid: 8e485c5fb088846a2b00f664872cedfc, type: 3}
+  - {fileID: 12800000, guid: a643fedf9eedb46cdbf6b27677455492, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

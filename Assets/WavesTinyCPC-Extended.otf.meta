@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 80162f63055034a8892c58381ff69de9
+guid: b6e7339aaf26343e492ffaccbe9d6fc4
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,7 +11,10 @@ TrueTypeFontImporter:
   fontName: Waves Tiny CPC
   fontNames:
   - Waves Tiny CPC
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5274aa6468ed848f791173487a8f5662, type: 3}
+  - {fileID: 12800000, guid: b110e2f5d788e421db04119fcf0540e2, type: 3}
+  - {fileID: 12800000, guid: b57c0cfc4a6b14b9f811dd3c445c3cc2, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
