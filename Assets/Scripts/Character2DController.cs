@@ -51,7 +51,7 @@ public class Character2DController : MonoBehaviour
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("hit") && Input.GetButtonDown("Fire1"))
         {
             anim.SetBool("isWalking", false);
-            anim.SetTrigger("hit");
+            anim.SetTrigger("attack");
         }
     }
 }
