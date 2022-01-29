@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Character2DController : MonoBehaviour
 {
+    public GameObject hud;
     private AudioSource source;
     private Animator anim;
     private float cooldownTimer = Mathf.Infinity;
@@ -61,5 +62,20 @@ public class Character2DController : MonoBehaviour
     {
         anim.SetTrigger("attack");
         cooldownTimer = 0;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "border")
+        {
+            StartCoroutine(bad_text());
+        }
+    }
+
+    IEnumerator bad_text()
+    {
+        hud.SetActive(true);
+        yield return new WaitForSeconds(8);
+        hud.SetActive(false);
     }
 }
