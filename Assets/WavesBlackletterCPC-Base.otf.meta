@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: ddda0c14804ed448788f0047b9b6aa48
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Waves Blackletter CPC
+  fontNames:
+  - Waves Blackletter CPC
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3664951291f4b4d9881d8be5dac26462, type: 3}
+  - {fileID: 12800000, guid: ca9f965e90053495a94145b91e936d6c, type: 3}
+  - {fileID: 12800000, guid: 8e485c5fb088846a2b00f664872cedfc, type: 3}
+  - {fileID: 12800000, guid: a643fedf9eedb46cdbf6b27677455492, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
