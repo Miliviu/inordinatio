@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Health_script : MonoBehaviour
@@ -40,6 +41,10 @@ public class Health_script : MonoBehaviour
                     component.enabled = false;
                 dead = true;
                 anim.SetTrigger("die");
+                if (anim.name == "warrior")
+                {
+                    SceneManager.LoadScene("end");
+                }
             }
         }
     }
