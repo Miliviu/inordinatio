@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEditor;
 using UnityEngine;
 
@@ -14,6 +15,8 @@ public class Character2DController : MonoBehaviour
     public float JumpForce = 1;
     public float dirX;
     private Rigidbody2D _rigidbody;
+    public int enemiesLeft = 4;
+    bool killedAllEnemies = false;
 
 //data for the attack
     public float range = 3;
@@ -26,7 +29,6 @@ public class Character2DController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
-
     }
 
     private void Update()
@@ -57,7 +59,6 @@ public class Character2DController : MonoBehaviour
         {
             _rigidbody.AddForce(new Vector2(0, JumpForce));
         }
-
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("hit") && Input.GetButtonDown("Fire1"))
         {
             if (cooldownTimer >= attackCooldown)
@@ -67,6 +68,18 @@ public class Character2DController : MonoBehaviour
             }
         }
         cooldownTimer += Time.deltaTime;
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemiesLeft = enemies.Length;
+        if(enemiesLeft == 0)
+        {
+            StartCoroutine(Waiter());
+        }
+    }
+
+    private IEnumerator Waiter()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("end");
     }
 
     private void Attack()

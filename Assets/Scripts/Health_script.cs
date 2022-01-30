@@ -43,10 +43,16 @@ public class Health_script : MonoBehaviour
                 anim.SetTrigger("die");
                 if (anim.name == "warrior")
                 {
-                    SceneManager.LoadScene("end");
+                    StartCoroutine(Waiter());
                 }
             }
         }
+    }
+
+    private IEnumerator Waiter()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("end");
     }
 
     private IEnumerator Invulnerability()
