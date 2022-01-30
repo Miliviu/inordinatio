@@ -50,7 +50,6 @@ public class MeleeEnemy : MonoBehaviour
 
         if (hit.collider != null)
             playerHealth = hit.transform.GetComponent<Health_script>();
-
         return hit.collider != null;
     }
     private void OnDrawGizmos()

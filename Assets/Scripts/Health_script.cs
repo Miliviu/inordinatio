@@ -13,7 +13,7 @@ public class Health_script : MonoBehaviour
     public int numberOfFlashes;
     private SpriteRenderer spriteRend;
 
-    private Behaviour[] components;
+    public Behaviour[] components;
     private bool invulnerable;
 
     private void Start()
@@ -36,15 +36,14 @@ public class Health_script : MonoBehaviour
         {
             if (!dead)
             {
-                anim.SetTrigger("die");
-
                 foreach (Behaviour component in components)
                     component.enabled = false;
-
                 dead = true;
+                anim.SetTrigger("die");
             }
         }
     }
+
     private IEnumerator Invulnerability()
     {
         invulnerable = true;
@@ -58,5 +57,9 @@ public class Health_script : MonoBehaviour
         }
         Physics2D.IgnoreLayerCollision(8, 9, false);
         invulnerable = false;
+    }
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 }

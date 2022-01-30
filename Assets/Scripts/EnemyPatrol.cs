@@ -11,8 +11,6 @@ public class EnemyPatrol : MonoBehaviour
     private Vector3 initScale;
     private bool movingLeft;
 
-    public float idleDuration;
-    private float idleTimer;
 
     public Animator anim;
 
@@ -20,6 +18,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         initScale = enemy.localScale;
     }
+
     private void OnDisable()
     {
         anim.SetBool("moving", false);
@@ -32,34 +31,30 @@ public class EnemyPatrol : MonoBehaviour
             if (enemy.position.x >= leftEdge.position.x)
                 MoveInDirection(-1);
             else
-                DirectionChange();
+                DirectionChange(1);
         }
         else
         {
             if (enemy.position.x <= rightEdge.position.x)
                 MoveInDirection(1);
             else
-                DirectionChange();
+                DirectionChange(-1);
         }
     }
 
-    private void DirectionChange()
+    private void DirectionChange(int _direction)
     {
         anim.SetBool("moving", false);
-        idleTimer += Time.deltaTime;
-
-        if(idleTimer > idleDuration)
-            movingLeft = !movingLeft;
+        enemy.position = new Vector3(enemy.position.x + _direction,
+            enemy.position.y, enemy.position.z);
+        enemy.localScale = new Vector3((Mathf.Abs(initScale.x) * _direction),
+          initScale.y, initScale.z);
+        movingLeft = !movingLeft;
     }
 
     private void MoveInDirection(int _direction)
     {
-        idleTimer = 0;
         anim.SetBool("moving", true);
-
-        //Make enemy face direction
-        enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * _direction,
-            initScale.y, initScale.z);
 
         //Move in that direction
         enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * speed,

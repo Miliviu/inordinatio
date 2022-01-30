@@ -17,7 +17,7 @@ public class Character2DController : MonoBehaviour
 
 //data for the attack
     public float range = 3;
-    public int damage = 3;
+    public int damage;
     public float colliderDistance = 0.25f;
     public BoxCollider2D boxCollider;
     public LayerMask enemyLayer;
@@ -101,6 +101,13 @@ public class Character2DController : MonoBehaviour
         if (EnemyInSight())
             enemyHealth.TakeDamage(damage);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy" && anim.GetBool("attack") == true)
+            collision.GetComponent<Health_script>().TakeDamage(1);
+    }
+
 //end attack code
 
     private void OnCollisionEnter2D(Collision2D other)
